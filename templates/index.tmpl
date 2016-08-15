@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ .title }}</title>
+        <link rel="icon" href="favicon.png">
+        <link href="css/milligram.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{ .title }}</h1>
+            <p>Hi, your random quote is the following:</p>
+            <pre><code>{{ .quote }}</code></pre>
+            <p>
+                <a class="button" href="/">Next Please</a>
+                <a class="button button-outline" href="/add">Add New Quote</a>
+                <a class="button button-outline" href="/manage">Manage Quotes</a>
+            </p>
+        </div>
+    </body>
+</html>
+

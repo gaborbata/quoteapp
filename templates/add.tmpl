@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ .title }}</title>
+        <link rel="icon" href="favicon.png">
+        <link href="css/milligram.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{ .title }}</h1>
+            <form action="/add" method="post">
+                <fieldset>
+                    <label for="quote">Quote</label>
+                    <textarea name="quote" id="quote"></textarea>
+                    <input class="button-primary" value="Send" type="submit">
+                </fieldset>
+            </form>
+            <p>
+                <a class="button button-outline" href="/">Back to Home</a>
+                <a class="button button-outline" href="/manage">Manage Quotes</a>
+            </p>
+        </div>
+    </body>
+</html>
+

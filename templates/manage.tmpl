@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ .title }}</title>
+        <link rel="icon" href="favicon.png">
+        <link href="css/milligram.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{ .title }}</h1>
+            {{ range $quote := .quotes }}
+                <form action="/delete" method="post">
+                    <div class="row">
+                        <div class="column column-75">
+                            <pre><code>{{ $quote }}</code></pre>
+                        </div>
+                        <div class="column column-25">
+                            <input type="hidden" value="{{ $quote }}" name="quote">
+                            <input class="button" value="Delete" type="submit" style="margin-top:16px;">
+                        </div>
+                    </div>
+                </form>
+            {{ end }}
+            <p>
+                <a class="button button-outline" href="/">Back to Home</a>
+                <a class="button button-outline" href="/add">Add New Quote</a>
+            </p>
+        </div>
+    </body>
+</html>
+
