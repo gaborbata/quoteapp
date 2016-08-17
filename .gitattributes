@@ -1,2 +1,2 @@
-* linguist-vendored
-assets/css/* linguist-vendored=false
+* linguist-vendored=false
+assets/**/* linguist-vendored
