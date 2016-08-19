@@ -26,9 +26,9 @@ func main() {
 	gin.SetMode(gin.ReleaseMode)
 
 	router := gin.Default()
-	router.Static("/css", "./assets/css")
-	router.Static("/js", "./assets/js")
-	router.StaticFile("/favicon.png", "./assets/favicon.png")
+	router.Static("/css", "assets/css")
+	router.Static("/js", "assets/js")
+	router.StaticFile("/favicon.png", "assets/favicon.png")
 	router.LoadHTMLGlob("templates/*")
 
 	router.GET("/", func(context *gin.Context) {
