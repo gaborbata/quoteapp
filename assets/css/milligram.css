@@ -201,6 +201,7 @@ pre {
   background: #f4f5f6;
   border-left: 0.3rem solid #9b4dca;
   font-family: "Menlo", "Consolas", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Monaco", monospace;
+  overflow: auto;
 }
 pre > code {
   background: transparent;
