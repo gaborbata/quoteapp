@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ .title }}</title>
-        <link rel="icon" href="favicon.png">
-        <link href="css/milligram.css" rel="stylesheet">
-    </head>
+    {{template "header" . }}
     <body>
-        <div class="container">
-            <h1>{{ .title }}</h1>
-            <p>Hi, your random quote is the following:</p>
-            <pre><code>{{ .quote }}</code></pre>
-            <p>
-                <a class="button" href="/">Next Please</a>
-                <a class="button button-outline" href="/add">Add New Quote</a>
-                <a class="button button-outline" href="/manage">Manage Quotes</a>
-            </p>
-        </div>
+        <main class="wrapper">
+            {{template "navigation"}}
+            <section class="container">
+                <p>Hi, your random quote is the following:</p>
+                <pre><code>{{ .quote }}</code></pre>
+                <p>
+                    <a class="button" href="/">Next Please</a>
+                    <a class="button button-outline" href="/add">Add New Quote</a>
+                    <a class="button button-outline" href="/manage">Manage Quotes</a>
+                </p>
+            </section>
+        </main>
     </body>
 </html>

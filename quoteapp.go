@@ -10,7 +10,7 @@ import (
 	"net/http"
 )
 
-type QuoteForm struct {
+type quoteForm struct {
 	Quote string `form:"quote"`
 }
 
@@ -49,7 +49,7 @@ func main() {
 		}
 		quote := quotes[rand.Intn(len(quotes))]
 		context.HTML(http.StatusOK, "index.tmpl", gin.H{
-			"title": "Quotes",
+			"title": "Quote",
 			"quote": quote,
 		})
 	})
@@ -83,7 +83,7 @@ func main() {
 	})
 
 	router.POST("/add", func(context *gin.Context) {
-		var form QuoteForm
+		var form quoteForm
 		if context.Bind(&form) == nil {
 			err = db.Update(func(tx *bolt.Tx) error {
 				bucket, err := tx.CreateBucketIfNotExists(quotesBucket)
@@ -107,7 +107,7 @@ func main() {
 	})
 
 	router.POST("/delete", func(context *gin.Context) {
-		var form QuoteForm
+		var form quoteForm
 		if context.Bind(&form) == nil {
 			err = db.Update(func(tx *bolt.Tx) error {
 				bucket, err := tx.CreateBucketIfNotExists(quotesBucket)
