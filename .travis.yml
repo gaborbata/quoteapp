@@ -1,0 +1,8 @@
+language: go
+go:
+  - 1.9
+install:
+  - go get github.com/boltdb/bolt
+  - go get github.com/gin-gonic/gin
+script:
+  - go build -v
