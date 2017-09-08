@@ -24,5 +24,4 @@ _testmain.go
 *.prof
 
 # Bolt DB
-*.db
 *.lock
