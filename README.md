@@ -14,3 +14,6 @@ An example `Dockerfile` is available to help building and running images contain
 Examples:
 * Build image: `docker build -t quoteapp .`
 * Run image: `docker run -i -t -p 3030:3030 quoteapp`
+
+A Docker Compose definition (`docker-compose.yml`) is also available, so you can use the `docker-compose up` command as well,
+instead of manually building/running the image.
