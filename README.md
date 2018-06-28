@@ -1,4 +1,4 @@
-# quoteapp [![Build Status](https://travis-ci.org/gabor-bata/quoteapp.svg?branch=master)](https://travis-ci.org/gabor-bata/quoteapp)
+# quoteapp [![Build Status](https://travis-ci.org/gaborbata/quoteapp.svg?branch=master)](https://travis-ci.org/gabor-bata/quoteapp)
 A responsive web application which displays a random quote from its embedded database.
 
 Used libraries/frameworks:
